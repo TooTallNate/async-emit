@@ -27,35 +27,38 @@
  *     if (err) throw err
  *     console.log('DONE!')
  *   })
+ *
+ * From: https://gist.github.com/1811707
  */
 
-module.exports = asyncEmit
+module.exports = asyncEmit;
+
 function asyncEmit (emitter, eventName, args, callback) {
 
   if (typeof args == 'function') {
-    callback = args
-    args = []
+    callback = args;
+    args = [];
   }
 
   var async = emitter.listeners(eventName).filter(function (func) {
-    return func.length > args.length
-  }).length
+    return func.length > args.length;
+  }).length;
 
-  var argv = [ eventName ].concat(args)
+  var argv = [ eventName ].concat(args);
 
   // callback function
   argv.push(function (err) {
     if (err && !callback.called) {
-      callback.called = true
-      callback(err)
+      callback.called = true;
+      callback(err);
     }
-    --async || callback()
-  })
+    --async || callback();
+  });
 
   // no async listeners
   if (async === 0) {
-    process.nextTick(callback)
+    process.nextTick(callback);
   }
 
-  return emitter.emit.apply(emitter, argv)
+  return emitter.emit.apply(emitter, argv);
 }
