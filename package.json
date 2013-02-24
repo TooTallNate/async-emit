@@ -1,0 +1,17 @@
+{
+  "name": "asyncEmit",
+  "version": "1.0.0",
+  "description": "Emits an event on an EventEmitter where the listener may include a callback function",
+  "main": "asyncEmit.js",
+  "repository": {
+    "type": "git",
+    "url": "git://gist.github.com/1811707.git"
+  },
+  "keywords": [
+    "EventEmitter",
+    "emit",
+    "async"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io)",
+  "license": "MIT"
+}
