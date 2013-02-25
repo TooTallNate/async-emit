@@ -1,6 +1,6 @@
 {
   "name": "async-emit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Emits an event on an EventEmitter where the listener may include a callback function",
   "main": "asyncEmit.js",
   "repository": {
