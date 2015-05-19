@@ -4,7 +4,7 @@
   "description": "Emits an event on an EventEmitter where the listener may include a callback function",
   "repository": {
     "type": "git",
-    "url": "git://gist.github.com/1811707.git"
+    "url": "git://github.com/TooTallNate/async-emit.git"
   },
   "keywords": [
     "EventEmitter",
